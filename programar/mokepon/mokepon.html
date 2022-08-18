@@ -4,39 +4,36 @@
 <head>
     <meta charset="utf-8" />
     <title>Mokepón</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
-    <script src="./js/mokepon.js"></script>
+    <link rel="shortcut icon" href="./public/assets/img/favicon.png" type="image/x-icon">
+    <script src="./public/js/mokepon.js"></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
+    <nav class="navbar"><img id="navbar__sound-icon" onclick="setEnableSounds()" src="./public/assets/img/sound.png" /></nav>
 
-    <h1 class="title"><img src="./assets/img/mokepon-logo.png" /><span class="title-span">🌱🔥💧</span></h1>
+    <h1 class="title"><img src="./public/assets/img/mokepon-logo.png" /><span class="title-span">🌱🔥💧</span></h1>
 
     <section class="pet-selection" id="pet-selection-section">
         <h2 class="subtitle">Elige tu mascota:</h2>
         <section class="pet-container">
-            <img class="pet-container__mokeball" src="./assets/img/mokeball.png"
-                onclick="playAudio('./assets/sound/mokeball-opening.mp3')" />
+            <img class="pet-container__mokeball" src="./public/assets/img/mokeball.png" />
             <label class="pet-container__card--hidden pet-container__card--capipepo" for="capipepo">
                 <span class="pet-container__card-name">Capipepo</span>
             </label>
             <input type="radio" name="mascota" id="capipepo" class="pet-container__input" />
-            <img class="pet-container__mokeball" src="./assets/img/mokeball.png"
-                onclick="playAudio('./assets/sound/mokeball-opening.mp3')" />
+            <img class="pet-container__mokeball" src="./public/assets/img/mokeball.png" />
             <label class="pet-container__card--hidden pet-container__card--ratigueya" for="ratigueya">
                 <span class="pet-container__card-name">Ratigüeya</span>
             </label>
             <input type="radio" name="mascota" id="ratigueya" class="pet-container__input" />
-            <img class="pet-container__mokeball" src="./assets/img/mokeball.png"
-                onclick="playAudio('./assets/sound/mokeball-opening.mp3')" />
+            <img class="pet-container__mokeball" src="./public/assets/img/mokeball.png" />
             <label class="pet-container__card--hidden pet-container__card--hipodoge" for="hipodoge">
                 <span class="pet-container__card-name">Hipodoge</span>
             </label>
             <input type="radio" name="mascota" id="hipodoge" class="pet-container__input" />
         </section>
-        <button class="pet-selection__button pet-selection__button--disabled" id="pet-selection-button"
-            onclick="playAudio('./assets/sound/caught-mokepon.mp3')">
+        <button class="pet-selection__button pet-selection__button--disabled" id="pet-selection-button">
             ¡Seleccionar!
         </button>
     </section>
@@ -62,7 +59,7 @@
 
         <section class="attack-selection__button-container">
             <button class="attack-selection__button attack-selection__button--capipepo"
-                id="ground-button">Tierra🌱</button>
+                id="grass-button">Planta🌱</button>
             <button class="attack-selection__button attack-selection__button--ratigueya"
                 id="fire-button">Fuego🔥</button>
             <button class="attack-selection__button attack-selection__button--hipodoge"

@@ -21,7 +21,7 @@ let currentSound
 let currentAttackSound
 
 // Functions
-const setEnableSounds = () => {
+const toggleEnableSounds = () => {
     let soundIconElement = document.getElementById('navbar__sound-icon')
     if (enableSounds) {
         if (currentSound) currentSound.volume = 0
@@ -198,6 +198,11 @@ const handleWaterAttack = () => {
 const restartGame = () => { location.reload() }
 
 const iniciarJuego = () => {
+    // Initialize navbar handlers
+    let soundIconElement = document.getElementById('navbar__sound-icon')
+    soundIconElement.addEventListener('click', toggleEnableSounds)
+    soundIconElement.src = `${imgBaseUrl}/sound.png`
+
     // Hide battle section
     let battleSectionElement = document.getElementById('attack-selection-section')
     let restartSectionElement = document.getElementById('restart-section')
